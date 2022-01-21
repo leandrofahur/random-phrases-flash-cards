@@ -2,7 +2,7 @@
  *****************************************/
 
 // initialize a random index track to check if the quote is being repeated:
-const previousIndex = -1;
+let previousIndex = -1;
 
 /***
  * `quotes` array
@@ -43,9 +43,17 @@ const quotes = [
  ***/
 const getRandomQuote = () => {
   // generate a random positive integer from 0 to the size of the quotes array:
-  const index = Math.floor(Math.random() * quotes.length);
+  let index = Math.floor(Math.random() * quotes.length);
 
-  const randomQuote = quotes[index];
+  // check if the previous index is the same as now, if it is, generates a new random index until the quote is different:
+  let randomQuote;
+  do {
+    index = Math.floor(Math.random() * quotes.length);
+    randomQuote = quotes[index];
+  } while (index === previousIndex);
+
+  // update the previous index now, so I am able to check later in the next click of the button:
+  previousIndex = index;
 
   // return the quote of the random index generated:
   return randomQuote;
