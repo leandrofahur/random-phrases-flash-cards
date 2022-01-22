@@ -65,18 +65,18 @@ const getRandomQuote = () => {
 const printQuote = () => {
   // get the random quote and create the html string:
   const quoteObj = getRandomQuote();
-  const htmlStr = `<p class="quote">${quoteObj.quote}</p><p class="source">${quoteObj.source}`;
-  console.log(htmlStr);
+  let htmlStr = `<p class="quote">${quoteObj.quote}</p><p class="source">${quoteObj.source}`;
 
   // if the citation exists, concatenate it with thw htmlStr & the same for the year:
   if (quoteObj.citation) {
-    htmlStr.concat(`<span>${quoteObj.citation}</span>`);
+    htmlStr += `, <span>${quoteObj.citation}</span>`;
   }
   if (quoteObj.year) {
-    htmlStr.concat(`<span>${quoteObj.year}</span>`);
+    htmlStr += `, <span>${quoteObj.year}</span>`;
   }
   // remember to close the </p>
-  htmlStr.concat(`</p>`);
+  htmlStr += `</p>`;
+  console.log(htmlStr);
 
   document.getElementById("quote-box").innerHTML = htmlStr;
 };
