@@ -22,7 +22,7 @@ $ npm run dev
 
 <h2>📝 <strong>References</strong></h2>
 <ol>
-  <p>MDN DOcs</p>
+  <p>MDN Docs</p>
   <li>
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
       MDN JavaScript docs.
