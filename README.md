@@ -5,7 +5,7 @@
 <p>This repository intends to host the implementation of the first assignment from CSIS 3380.</p>
 <br/>
 
-<h2><strong>Running the application</strong></h2>
+<h2>🏗<strong>Running the application</strong></h2>
 In order to run the application, first install the node_modules dependencies:
 
 ```javascript
