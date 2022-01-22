@@ -13,10 +13,10 @@ $ npm i
 ```
 
 Then, one can run the application with nodemon typing into one's terminal:
+
 ```javascript
 $ npm run dev
 ```
-
 
 <br/>
 
